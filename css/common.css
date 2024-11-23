@@ -43,3 +43,9 @@ button {
   width: 200px;
   border: 2px solid rgb(231, 230, 230);
 }
+
+#boxes{
+  width: 800px;
+  height: 400px;
+  border: 3px dashed rgb(154, 193, 54);
+}
