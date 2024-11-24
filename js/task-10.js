@@ -17,14 +17,6 @@ const inNumber = document.querySelector('input.inNumber');
 let square = 30;
 let amaunt = 0;
 
-function createBoxes() {
-      for (let i = 0; i < amaunt; i += 1) {
-        boxOneFun();
-        square += 10;
-}
-  square = 30;
-}
-
 function boxOneFun() {
 const boxOne = document.createElement('div');
 boxOne.classList.add('boxOne');
@@ -36,17 +28,25 @@ refBoxes.append(boxOne);
 
 function toDestroy() {
   refBoxes.innerHTML = '';
-  }
+}
 
 butCreate.addEventListener('click', createBoxes);
 butDestroy.addEventListener('click', toDestroy);
 inNumber.addEventListener('input', toInput);
 
 function toInput(event) {
-  // console.log(event.currentTarget.value);
+  console.log(event.currentTarget.value);
   amaunt = event.currentTarget.value;
-    
 }
+
+function createBoxes() {
+      for (let i = 0; i < amaunt; i += 1) {
+        boxOneFun();
+        square += 10;
+}
+        square = 30;
+}
+
 
 
 
